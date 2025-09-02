@@ -139,5 +139,37 @@ body {
   margin-right: auto;
 }
 
+.video-container {
+  display: flex; /* 1. 启用 Flexbox 布局 */
+  gap: 20px; /* 2. 设置视频之间的间距 (可选) */
+  flex-wrap: wrap; /* 3. 在屏幕变窄时允许换行 (实现响应式) */
+}
+
+.video-container video {
+  /* flex: 1; 表示每个视频占据相等的空间。
+    min-width 设置一个最小宽度，防止过度挤压。
+  */
+  flex: 1;
+  min-width: 300px; /* 确保在窄屏上不会被压得太小 */
+  width: 100%; /* 确保视频宽度自适应容器 */
+  height: auto; /* 高度自动，保持视频原始比例 */
+  object-fit: cover; /* 确保视频内容填满区域，可能会裁剪 */
+}
+
+.grid-container {
+  display: grid; /* 1. 启用 Grid 布局 */
+  grid-template-columns: 1fr 1fr; /* 2. 定义两列，每列占据一份可用空间 */
+  gap: 20px; /* 3. 设置网格间距 */
+}
+.grid-container video {
+  width: 100%; /* 让视频宽度填满其所在的网格单元 */
+  height: auto;
+}
+/* 为了响应式，可以在小屏幕上变为单列布局 */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 在宽度小于768px的设备上，变为1列 */
+  }
+}
 
 
