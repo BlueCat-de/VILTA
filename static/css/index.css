@@ -150,28 +150,7 @@ body {
   justify-items: center; /* 使网格项（每个视频卡片）在网格单元内水平居中 */
   align-items: start; /* 使网格项垂直顶部对齐 */
 }
-.video-item {
-  display: flex; /* 启用 Flexbox */
-  flex-direction: column; /* 让内容垂直堆叠 */
-  align-items: center; /* 使视频和标题在卡片内居中 */
-  padding: 15px;
-  border-radius: 8px;
-  max-width: 400px; /* 限制每个视频卡片的最大宽度 */
-  width: 100%; /* 确保在小屏幕上自适应 */
-}
-.video-item video {
-  width: 100%; /* 视频宽度填充其父容器 (.video-item) */
-  height: auto;
-  object-fit: cover; /* 确保视频内容填满区域，可能会裁剪 */
-  border-radius: 4px;
-  margin-bottom: 15px; /* 视频和子标题之间的间距 */
-}
-.video-item .subtitle {
-  font-size: 1.1em; /* 子标题稍微大一点 */
-  color: #4a4a4a;
-  text-align: center; /* 确保子标题文字居中 */
-  margin-top: 0; /* 移除 Bulma 默认的 subtitle 上边距 */
-}
+
 /* 响应式调整：在小屏幕上改为单列 */
 @media (max-width: 768px) {
   .grid-container {
