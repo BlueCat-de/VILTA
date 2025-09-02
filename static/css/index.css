@@ -139,21 +139,9 @@ body {
   margin-right: auto;
 }
 
-.video-container {
-  display: flex; /* 1. 启用 Flexbox 布局 */
-  gap: 20px; /* 2. 设置视频之间的间距 (可选) */
-  flex-wrap: wrap; /* 3. 在屏幕变窄时允许换行 (实现响应式) */
-}
-
-.video-container video {
-  /* flex: 1; 表示每个视频占据相等的空间。
-    min-width 设置一个最小宽度，防止过度挤压。
-  */
-  flex: 1;
-  min-width: 300px; /* 确保在窄屏上不会被压得太小 */
-  width: 100%; /* 确保视频宽度自适应容器 */
-  height: auto; /* 高度自动，保持视频原始比例 */
-  object-fit: cover; /* 确保视频内容填满区域，可能会裁剪 */
+.main-video-section {
+  max-width: 1200px; /* 限制整个视频区域的最大宽度 */
+  margin: 0 auto; /* 使整个视频区域居中 */
 }
 
 .grid-container {
