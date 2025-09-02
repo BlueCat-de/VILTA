@@ -150,12 +150,7 @@ body {
   justify-items: center; /* 使网格项（每个视频卡片）在网格单元内水平居中 */
   align-items: start; /* 使网格项垂直顶部对齐 */
 }
-.video-item {
-  display: flex;
-  flex-direction: column;
-  /* 这一行负责将内部的所有元素（视频、标题）水平居中 */
-  align-items: center;
-}
+
 /* 响应式调整：在小屏幕上改为单列 */
 @media (max-width: 768px) {
   .grid-container {
